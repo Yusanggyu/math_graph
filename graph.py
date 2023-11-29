@@ -3,11 +3,11 @@ import matplotlib.pyplot as plt
 
 
 def f(x):
-  return x**3 - x**2 - 1 # f(x) 식
+  return x**3 - x**2 - 1 # f(x) # 식
 
 
 def df(x):
-  return 3 * x**2 - 2 * x  f(x) 미분 식
+  return 3 * x**2 - 2 * x  # f(x) 미분 식
 
 
 def newton_method(initial_guess, epsilon=1e-6, max_iterations=100): # 뉴턴 방법 함수
