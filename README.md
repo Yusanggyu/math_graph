@@ -10,10 +10,10 @@ def f(x):
 
 
 def df(x):
-  return 3 * x**2 - 2 * x  f(x) 미분 식
+  return 3 * x**2 - 2 * x  #f(x) 미분 식
 
-
-def newton_method(initial_guess, epsilon=1e-6, max_iterations=100): # 뉴턴 방법 함수
+# 뉴턴 방법 함수
+def newton_method(initial_guess, epsilon=1e-6, max_iterations=100):
   x = initial_guess
   for i in range(max_iterations):
     x = x - f(x) / df(x)
@@ -21,12 +21,12 @@ def newton_method(initial_guess, epsilon=1e-6, max_iterations=100): # 뉴턴 방
       return x, i, abs(f(x))
   return None, max_iterations, None
 
-
+# 할선법 함수
 #1e-6 = 0.000001
 def secant_method(initial_guess1,
                   initial_guess2,
                   epsilon=1e-6,
-                  max_iterations=100): # 할선법 함수
+                  max_iterations=100): 
   x_n_minus_1 = initial_guess1
   x_n = initial_guess2
 
@@ -44,8 +44,8 @@ def secant_method(initial_guess1,
 
   return None, max_iterations, None
 
-
-def bisection_method(a, b, epsilon=1e-6, max_iterations=100): # 이분법 함수
+# 이분법 함수
+def bisection_method(a, b, epsilon=1e-6, max_iterations=100): 
   for i in range(max_iterations):
     c = (a + b) / 2
     if abs(f(c)) < epsilon:
