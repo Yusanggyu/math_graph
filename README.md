@@ -101,3 +101,12 @@ plt.title('Root Finding Methods')
 plt.legend()
 plt.show()
 ```
+
+result
+------
+![poster](./image.png)
+```
+Newton Method: Root=1.4655713749070918, Iterations=3, Accuracy=50.240189741757035
+Secant Method: Root=1.465571205895194, Iterations=6, Accuracy=9.126169642215132
+Bisection Method: Root=1.465571403503418, Iterations=20, Accuracy=60.28480861175467
+```
